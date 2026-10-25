@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070a10">
+<meta name="description" content="Эльвин — личное портфолио. Коммуникация, аналитика и творчество.">
+<title>Эльвин — личное портфолио</title>
+<style>
+:root{color-scheme:dark;--bg:#070a10;--text:#f1f5f9;--muted:#9ba8ba;--line:rgba(203,213,225,.17)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(to right,rgba(148,163,184,.065) 1px,transparent 1px),linear-gradient(to bottom,rgba(148,163,184,.065) 1px,transparent 1px);background-size:48px 48px;animation:grid 24s linear infinite}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,rgba(100,116,139,.22),transparent 48%),radial-gradient(ellipse at 85% 60%,rgba(30,64,175,.12),transparent 40%),linear-gradient(to bottom,transparent 45%,#070a10 100%)}
+@keyframes grid{to{background-position:48px 48px}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+main{width:min(900px,100%);margin:auto;padding:54px 22px 42px;text-align:center}
+header{animation:rise .7s ease both;margin-bottom:28px}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3,p{margin-top:0}
+h1{font-family:"Iowan Old Style",Georgia,serif;font-weight:400;font-size:clamp(2.6rem,7vw,4rem);letter-spacing:-.04em;margin:.15em 0}
+.photo-wrap{position:relative;display:inline-block;margin:0 auto 24px;animation:rise .8s .08s ease both}
+.photo-wrap:before{content:"";position:absolute;inset:-18px;border-radius:42px;background:linear-gradient(135deg,rgba(148,163,184,.18),rgba(59,130,246,.12));filter:blur(22px);z-index:-1}
+.glass{background:linear-gradient(135deg,rgba(148,163,184,.14),rgba(30,41,59,.28) 50%,rgba(15,23,42,.48));border:1px solid var(--line);box-shadow:0 20px 50px -12px rgba(2,6,23,.75),inset 0 1px 1px rgba(226,232,240,.25);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:25px;overflow:hidden;position:relative}
+.photo-frame{padding:12px}
+.photo-frame img{display:block;width:min(72vw,360px);height:min(72vw,360px);object-fit:cover;border-radius:16px}
+h2{font-size:clamp(1.5rem,4vw,2rem);font-weight:500;letter-spacing:-.025em;margin-bottom:5px}
+.status{color:var(--muted);font-size:.92rem;margin-bottom:0}
+.cards{display:flex;flex-direction:column;gap:16px;margin-top:30px;animation:rise .8s .18s ease both}
+.card{padding:28px;text-align:center}
+.section-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.bio{max-width:680px;margin:12px auto 0;color:#d7dee8;font-size:1.03rem}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.mini{padding:23px 19px}
+.icon{width:42px;height:42px;display:grid;place-items:center;margin:0 auto 14px;border-radius:15px;background:rgba(30,41,59,.8);font-size:1.15rem}
+h3{font-size:1rem;font-weight:550;margin-bottom:8px}
+.mini p{font-size:.9rem;color:#c2ccda;margin-bottom:0}
+.contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.contact{display:flex;flex-direction:column;align-items:center;padding:22px;text-decoration:none;color:var(--text);transition:transform .2s,border-color .2s}
+.contact:hover{transform:translateY(-3px);border-color:rgba(203,213,225,.4)}
+.contact small{color:var(--muted);letter-spacing:.13em;text-transform:uppercase;font-size:.7rem}
+.contact strong{font-weight:500;overflow-wrap:anywhere}
+footer{padding:28px 10px 0;color:#748195;font-size:.78rem}
+@media(max-width:650px){main{padding:38px 16px 28px}.three{grid-template-columns:1fr}.mini{padding:22px}.card{padding:24px 19px}.contacts{grid-template-columns:1fr}.photo-frame img{width:min(76vw,340px);height:min(76vw,340px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Москва, Россия · 2 года практики</div>
+    <h1>Эльвин</h1>
+  </header>
+  <section>
+    <div class="photo-wrap">
+      <div class="glass photo-frame"><img src="./pfp.png" alt="Фотография Эльвина" width="640" height="640"></div>
+    </div>
+    <h2>Эльвин, 17 лет</h2>
+    <p class="status">Открыт к интересным проектам и предложениям</p>
+  </section>
+  <div class="cards">
+    <section class="glass card">
+      <div class="section-label">Обо мне</div>
+      <p class="bio">Ценю глубину мысли, интеллектуальную эстетику Old Money и культуру диалога. Быстро погружаюсь в новые сферы — от философии до сложной логистики — если задача по-настоящему увлекает.</p>
+    </section>
+    <section class="three" aria-label="Философия и взгляды">
+      <article class="glass mini"><div class="icon" aria-hidden="true">⌖</div><h3>Интеллект и аналитика</h3><p>Увлекаюсь глубокими рассуждениями, чтением литературы и решением судоку для развития структурного мышления. При наличии материалов быстро осваиваю новые предметные области.</p></article>
+      <article class="glass mini"><div class="icon" aria-hidden="true">⚖</div><h3>Дипломатия и речь</h3><p>Коммуникация — моя сильная сторона. Умею выстраивать диалог, находить общий язык с разными людьми и переводить спорные ситуации в конструктивное русло.</p></article>
+      <article class="glass mini"><div class="icon" aria-hidden="true">✧</div><h3>Эстетика и творчество</h3><p>Придерживаюсь выдержанного стиля в тёмных, серых и коричневых тонах. Пишу стихи, слежу за культурой речи и увлекаюсь искусством нишевой парфюмерии.</p></article>
+    </section>
+    <section class="three" aria-label="Навыки и сильные стороны">
+      <article class="glass mini"><div class="icon" aria-hidden="true">↔</div><h3>Переговоры и медиация</h3><p>Разрешение конфликтов мирным путём, поиск компромиссов и построение доверительных отношений в команде.</p></article>
+      <article class="glass mini"><div class="icon" aria-hidden="true">▤</div><h3>Быстрое обучение</h3><p>Быстрое погружение в незнакомые процессы, работа с информацией, логистикой и новыми проектами.</p></article>
+      <article class="glass mini"><div class="icon" aria-hidden="true">✦</div><h3>Культура презентации</h3><p>Грамотная устная и письменная речь, внимание к деталям, этикету и визуальному восприятию.</p></article>
+    </section>
+    <section class="contacts" aria-label="Контакты">
+      <a class="glass contact" href="https://t.me/veeeiln" target="_blank" rel="noopener noreferrer"><div class="icon" aria-hidden="true">➤</div><small>Telegram</small><strong>t.me/veeeiln</strong></a>
+      <a class="glass contact" href="mailto:mansyrovelvin384@gmail.com"><div class="icon" aria-hidden="true">✉</div><small>Почта</small><strong>mansyrovelvin384@gmail.com</strong></a>
+    </section>
+  </div>
+  <footer>© 2026 Эльвин · Сделано с вниманием к деталям</footer>
+</main>
+</body>
+</html>
